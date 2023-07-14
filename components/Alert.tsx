@@ -30,7 +30,6 @@ const Alert:  React.FunctionComponent<AlertProps> = ({ title, mainText, buttons,
 
                {buttons.map((button) => (
                   <Button
-                     key={button.label}
                      callback={button.onClick}
                      label={button.label}
                      color={button.color}
