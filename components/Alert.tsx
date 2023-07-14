@@ -1,9 +1,11 @@
 import React from 'react';
+import Button from './Button';
 
 interface Button {
    label: string;
    onClick: () => void;
    // accessKey?: string;
+   color?: string;
 }
 
 interface AlertProps {
@@ -25,15 +27,16 @@ const Alert:  React.FunctionComponent<AlertProps> = ({ title, mainText, buttons,
             <h2 className="text-xl font-bold mb-2">{title}</h2>
             <p className="text-gray-800 mb-4">{mainText}</p>
             <div className="flex space-x-4">
-               {buttons.map((button, index) => (
-                  <button
-                     key={index}
-                     className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none"
-                     onClick={button.onClick}
-                  >
-                     {button.label}
-                  </button>
+
+               {buttons.map((button) => (
+                  <Button
+                     key={button.label}
+                     callback={button.onClick}
+                     label={button.label}
+                     color={button.color}
+                  />
                ))}
+
             </div>
          </div>
       </div>

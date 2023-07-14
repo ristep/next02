@@ -1,5 +1,5 @@
 "use client"
-import Button from "@/components/Button"
+import Button from "../../components/Button"
 
 const About = () => {
 
@@ -11,16 +11,20 @@ const About = () => {
       <>
          <h1>About</h1>
          <p>This is the about page for my website.</p>
-         <p>I'm a software engineer who loves to build things.</p>
-         <p>I'm passionate about creating user-friendly and accessible products.</p>
-         <Button color='blue' label='Test Button' callback={handleButtonClick} isButtonActive={true}/>
-         <Button color='blue' label='Test Button' callback={handleButtonClick} isButtonActive={false}/>
+         <p>Im a software engineer who loves to build things.</p>
+         <p>Im passionate about creating user-friendly and accessible products.</p>
 
-         <Button  label='Submit' callback={handleButtonClick} type='submit' />
-         <Button color='red' label='Reset' callback={handleButtonClick} type='reset' />
+         <Button color="blue" label='Test Button' callback={handleButtonClick} />
+         <Button color="red" label='Test Button' callback={handleButtonClick} />
+
+         <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit' />
+         <Button color="green" label='Reset' callback={handleButtonClick} type='reset' />
+         <Button color="slate" label='Reset' callback={handleButtonClick} type='reset' />
+         <Button color="sky" label='Reset' callback={handleButtonClick} type='reset' />
+         <Button color="orange" label='Reset' callback={handleButtonClick} type='reset' />
 
       </>
    )
 }
 
-export default About
+export default About;

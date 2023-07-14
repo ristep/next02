@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+   // ssr: false,
+   // render: 'client',
+}
 
 module.exports = nextConfig

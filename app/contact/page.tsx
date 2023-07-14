@@ -3,7 +3,7 @@ import Alert from '@/components/Alert'
 import Head from 'next/head'
 import { useState } from 'react';
 
-export default () => {
+const Contact = () => {
    const [showAlert, setShowAlert] = useState(false);
 
    const handleOK = () => {
@@ -16,8 +16,7 @@ export default () => {
       { label: 'Cancel',onClick: () => { 
                            console.log('Cancel clicked'); 
                            setShowAlert(false);
-                        } 
-   
+                        }, color: "red" 
       },
    ];
 
@@ -43,3 +42,5 @@ export default () => {
       </>
    )
 }
+
+export default Contact;
