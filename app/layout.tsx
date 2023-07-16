@@ -27,6 +27,9 @@ export default function RootLayout({
         {children}
       </ShadowPanel>  
 
+      <footer>
+      <h2>Next02-testapp ver0.01.00</h2>
+      </footer>
       </body>
     </html>
   )
