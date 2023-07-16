@@ -1,5 +1,6 @@
 "use client"
 import Alert from '@/components/Alert'
+import Button from '@/components/Button';
 import Head from 'next/head'
 import { useState } from 'react';
 
@@ -23,23 +24,21 @@ const Contact = () => {
    const togleAlert = () => {setShowAlert(!showAlert)}
 
    return (
-      <>
+      <div suppressHydrationWarning={true}>
          <Head>
             <title>Contact</title>
          </Head>
-         <button
-            className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
-            onClick={togleAlert}
-         >
-            Togle Alert
-         </button>
+         <Button
+            label = "Togle Alert"
+            callback={togleAlert}
+         />
             <Alert
                visible={showAlert}
                title="Alert Title"
                mainText="This is the main text of the alert."
                buttons={buttons}
             />
-      </>
+      </div>
    )
 }
 
