@@ -1,7 +1,7 @@
 "use client"
-import Button from "@/components/Button"
 import CardVertical from "@/components/CardVertical";
 import CardHorizontal from "@/components/CardHorizontal";
+import Button from "@/components/Button";
 
 const About = () => {
 
@@ -16,14 +16,23 @@ const About = () => {
          <p>Im a software engineer who loves to build things.</p>
          <p>Im passionate about creating user-friendly and accessible products.</p>
 
-         <Button color="blue" label='Test Button' callback={handleButtonClick} />
-         <Button color="red" label='Test Button' callback={handleButtonClick} />
+         <Button color="blue"   label='Test Button' callback={handleButtonClick} />
+         <Button color="red"    label='Test Button' callback={handleButtonClick} />
+         <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit'/>
+         <Button color="green"  label='Reset'  callback={handleButtonClick} type='reset' />
+         <Button color="slate"  label='Reset'  callback={handleButtonClick} type='reset' />
+         <Button color="sky"    label='Reset'  callback={handleButtonClick} type='reset' />
+         <Button color="orange" label='Reset'  callback={handleButtonClick} type='reset' />
 
-         <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit' />
-         <Button color="green" label='Reset' callback={handleButtonClick} type='reset' />
-         <Button color="slate" label='Reset' callback={handleButtonClick} type='reset' />
-         <Button color="sky" label='Reset' callback={handleButtonClick} type='reset' />
-         <Button color="orange" label='Reset' callback={handleButtonClick} type='reset' />
+         <p>Disabled</p>
+
+         <Button color="blue"   label='Test Button' callback={handleButtonClick} active={false}/>
+         <Button color="red"    label='Test Button' callback={handleButtonClick} active={false}/>
+         <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit'active={false} />
+         <Button color="green"  label='Reset'  callback={handleButtonClick} type='reset' active={false}/>
+         <Button color="slate"  label='Reset'  callback={handleButtonClick} type='reset' active={false}/>
+         <Button color="sky"    label='Reset'  callback={handleButtonClick} type='reset' active={false}/>
+         <Button color="orange" label='Reset'  callback={handleButtonClick} type='reset' active={false}/>
 
          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-2">
 
