@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React from 'react';
 
 interface CardProps {
@@ -14,7 +15,7 @@ const CardHorizontal: React.FC<CardProps> = ({ image, title, text, subtext, subt
          // <div className="max-w-sm w-full lg:max-w-full lg:flex m-4 rounded-md overflow-hidden shadow-lg">
          <div className="max-w-ml rounded-md overflow-hidden shadow-l">
             {image && (
-               <img className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" src={image} alt="Image" />
+               <Image className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" src={image} alt="Image" />
             )}
             <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
                <div className="mb-8">

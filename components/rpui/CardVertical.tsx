@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React from 'react';
 
 interface CardProps {
@@ -15,7 +16,7 @@ const CardVertical: React.FC<CardProps> = ({ image, title, text, subtext, subtit
 
       <div className="max-w-sm rounded-md overflow-hidden shadow-lg" suppressHydrationWarning={true}>
          {image &&
-            <img className="w-full" src={image} alt="sliko" />
+            <Image className="w-full" src={image} alt="sliko" />
          }
 
          <div className="px-6 py-4">
