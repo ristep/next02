@@ -27,7 +27,7 @@ const Contact = () => {
    const togleAlert = () => { setShowAlert(!showAlert) }
 
    return (
-      <div suppressHydrationWarning={true}>
+      <div>
          <Head>
             <title>Contact</title>
          </Head>
