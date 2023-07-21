@@ -28,7 +28,7 @@ export default function RootLayout({
       </ShadowPanel>  
 
       <footer>
-      <h2>Next02-testapp ver. ver - 0.01.10 </h2>
+      <h1>Next02-testapp ver. ver - 0.01.11a </h1>
       </footer>
       </body>
     </html>
