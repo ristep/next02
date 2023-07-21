@@ -1,5 +1,5 @@
-import ShadowPanel from '@/components/ShadowPanel'
-import Navbar from '@/components/Navbar'
+import ShadowPanel from '@/components/rpui/ShadowPanel'
+import Navbar from '@/components/rpui/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'

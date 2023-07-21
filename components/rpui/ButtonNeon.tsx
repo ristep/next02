@@ -2,7 +2,8 @@
 
 import React from 'react';
 interface ButtonProps {
-   label: string;
+   label?: string;
+   children?: React.ReactNode;
    icon?: React.ReactNode;
    callback: () => void;
    key?: string;
@@ -14,7 +15,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-   label,
+   label = "",
    icon,
    callback,
    active = true,
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
    padding = 'py-2 px-4',
    margin = 'my-2 mx-2',
    color = 'blue',
+   children = undefined
 }) => {
 
    const rounding = 'rounded-xl';
@@ -52,6 +54,7 @@ const Button: React.FC<ButtonProps> = ({
          <div className={`${buttonClassColor} ${rounding} ${padding} relative  ring-1 ring-gray-900/5 leading-none flex items-top justify-start space-x-2`}>
             {icon && <span className="mr-2">{icon}</span>}
             {label}
+            {children}
          </div>
       </button>
    );

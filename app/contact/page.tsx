@@ -1,7 +1,8 @@
 "use client"
-import Alert from '@/components/Alert'
-import Button from '@/components/ButtonNeon';
-import ButtonNeon from '@/components/ButtonNeon';
+import Alert from '@/components/rpui/Alert'
+import Button from '@/components/rpui/ButtonNeon';
+import ButtonNeon from '@/components/rpui/ButtonNeon';
+// import { Button as ButtonUI } from "@/components/rpui/ButtonV"
 import Head from 'next/head'
 import { useState } from 'react';
 
@@ -31,28 +32,32 @@ const Contact = () => {
             <title>Contact</title>
          </Head>
 
-         <ButtonNeon
-            label="Togle Alert"
-            callback={togleAlert}
-         />
+         <ButtonNeon callback={togleAlert} >
+            Leprakon
+         </ButtonNeon>
 
-         <Button color="blue"   label='Test Button' callback={togleAlert} />
-         <Button color="red"    label='Test Button' callback={togleAlert} />
-         <Button color="yellow" label='Submit' callback={togleAlert} type='submit'/>
-         <Button color="green"  label='Reset'  callback={togleAlert} type='reset' active={false} />
-         <Button color="slate"  label='Reset'  callback={togleAlert} type='reset' />
-         <Button color="sky"    label='Reset'  callback={togleAlert} type='reset' />
-         <Button color="orange" label='Reset'  callback={togleAlert} type='reset' />
+         <ButtonNeon color="blue" label='Test Button' callback={togleAlert} />
+         <ButtonNeon color="red" label='Test Button' callback={togleAlert} />
+         <ButtonNeon color="yellow" label='Submit' callback={togleAlert} type='submit'/>
+         <Button color="green" label='Reset' callback={togleAlert} type='reset' active={false} />
+         <Button color="slate" label='Reset' callback={togleAlert} type='reset' />
+         <Button color="sky" label='Reset' callback={togleAlert} type='reset' />
+         <Button color="orange" label='Reset' callback={togleAlert} type='reset'><p>Children</p></Button>
 
          <p>Disabled</p>
 
-         <Button color="blue"   label='Test Button' callback={togleAlert} active={false}/>
-         <Button color="red"    label='Test Button' callback={togleAlert} active={false}/>
+         <Button color="blue" label='Test Button' callback={togleAlert} active={false}/>
+         <Button color="red" label='Test Button' callback={togleAlert} active={false}/>
          <Button color="yellow" label='Submit' callback={togleAlert} type='submit' active={false} />
-         <Button color="green"  label='Reset'  callback={togleAlert} type='reset' active={true}/>
-         <Button color="slate"  label='Reset'  callback={togleAlert} type='reset' active={false}/>
-         <Button color="sky"    label='Reset'  callback={togleAlert} type='reset' active={false}/>
-         <Button color="orange" label='Reset'  callback={togleAlert} type='reset' active={false}/>
+         <Button color="green" label='Reset' callback={togleAlert} type='reset' active={true}/>
+         <Button color="slate" label='Reset' callback={togleAlert} type='reset' active={false}/>
+         <Button color="sky" label='Reset' callback={togleAlert} type='reset' active={false}/>
+         <Button color="orange" label='Reset' callback={togleAlert} type='reset' active={false}/>
+
+
+         {/* <ButtonUI variant="destructive" onClick={togleAlert}>
+            <h2>Button UI</h2>
+         </ButtonUI> */}
 
          <Alert
             visible={showAlert}

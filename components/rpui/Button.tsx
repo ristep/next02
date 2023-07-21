@@ -46,7 +46,7 @@ const Button: React.FC<ButtonProps> = ({
    const finalClass = active ?
                            `${buttonColor} ${padding} ${margin} ${rounding} ${shadowing} ${hovering} ${outliner} ${glowing}`
                            :
-                           `${buttonColor} ${padding} ${margin} ${rounding} ${shadowing} `;
+                           `${buttonColor} ${padding} ${margin} ${rounding} ${shadowing}`;
 
 
    return (

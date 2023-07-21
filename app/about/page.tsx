@@ -1,7 +1,7 @@
 "use client"
-import CardVertical from "@/components/CardVertical";
-import CardHorizontal from "@/components/CardHorizontal";
-import Button from "@/components/Button";
+import CardVertical from "@/components/rpui/CardVertical";
+import CardHorizontal from "@/components/rpui/CardHorizontal";
+import Button from "@/components/rpui/Button";
 
 const About = () => {
 
@@ -17,7 +17,7 @@ const About = () => {
          <p>Im passionate about creating user-friendly and accessible products.</p>
 
          <Button color="blue"   label='Test Button' callback={handleButtonClick} />
-         <Button color="red"    label='Test Button' callback={handleButtonClick} />
+         <Button color="red"    label='Button' callback={handleButtonClick} />
          <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit'/>
          <Button color="green"  label='Reset'  callback={handleButtonClick} type='reset' />
          <Button color="slate"  label='Reset'  callback={handleButtonClick} type='reset' />

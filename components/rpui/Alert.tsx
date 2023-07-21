@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from './ButtonNeon';
 
 interface Button {
    label: string;
@@ -41,6 +41,7 @@ const Alert:  React.FunctionComponent<AlertProps> = ({ title, mainText, buttons,
          </div>
       </div>
    );
+
 };
 
 export default Alert;
