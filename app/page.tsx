@@ -2,7 +2,7 @@
 import * as React from "react";
 import Button from '@/components/rpui/ButtonNeon';
 import Alert from '@/components/rpui/Alert'
-import { useCopyToClipboard } from 'usehooks-ts'
+import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
 
 export default function Home() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
