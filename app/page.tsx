@@ -1,8 +1,8 @@
 "use client"
 import * as React from "react";
-import { useCopyToClipboard } from "@uidotdev/usehooks";
 import Button from '@/components/rpui/ButtonNeon';
 import Alert from '@/components/rpui/Alert'
+import { useCopyToClipboard } from 'usehooks-ts'
 
 export default function Home() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
