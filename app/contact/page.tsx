@@ -27,7 +27,7 @@ const Contact = () => {
    const togleAlert = () => { setShowAlert(!showAlert) }
 
    return (
-      <div>
+      <div className='my-combo-class'>
          <Head>
             <title>Contact</title>
          </Head>

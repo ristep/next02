@@ -3,6 +3,7 @@ import * as React from "react";
 import Button from '@/components/rpui/ButtonNeon';
 import Alert from '@/components/rpui/Alert'
 import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
+import Card from "@/components/rpui/Card";
 
 export default function Home() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
@@ -36,14 +37,49 @@ export default function Home() {
   return (
     <div>
 
-        <label>Fake API Key</label>
+  
+        <div className="p-8">
+          <label>Fake API Key</label>
+          <pre>
+            <code>{lastHush}</code>
+            <br />
+            <Button callback = {() => getHush()}>Generate Hush</Button>
+            <Button callback = {() => copyHush()}>Copy to clipboard</Button>
+          </pre>
+        </div>
 
-        <pre>
-          <code>{lastHush}</code>
-          <br />
-          <Button callback = {() => getHush()}>Generate Hush</Button>
-          <Button callback = {() => copyHush()}>Copy to clipboard</Button>
-        </pre>
+        <div className="grid grid-cols-4 gap-2">
+
+        <div className="p-4">
+        <Card
+            image="Illy.jpg"
+            title="Can coffee make you a better developer?"
+            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+            subtext="Jonathan Reinink Aug 18"
+            subtitle="Lorem"
+        />
+        </div>
+
+        <div className="p-4">
+          <Card
+              image="turkish-cofee.webp"
+              title="Can coffee make you a better developer?"
+              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              subtext="Jonathan Reinink Aug 18"
+              subtitle="Ipsum"
+              />
+        </div>
+
+        <div className="p-4">
+          <Card
+              image="ring.png"
+              title="Can coffee make you a better developer?"
+              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              subtext="Jonathan Reinink Aug 18"
+              subtitle="Delorem LXris"
+              />
+        </div>
+      </div>
 
         <Alert
             visible={showAlert}

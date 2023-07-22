@@ -1,4 +1,5 @@
 "use client"
+
 import CardVertical from "@/components/rpui/CardVertical";
 import CardHorizontal from "@/components/rpui/CardHorizontal";
 import Button from "@/components/rpui/Button";
@@ -11,7 +12,9 @@ const About = () => {
 
    return (
       <div>
-         <h1>About</h1>
+         <div className="my-combo-class">
+            <h1>About</h1>
+         </div>
          <p>This is the about page for my website.</p>
          <p>Im a software engineer who loves to build things.</p>
          <p>Im passionate about creating user-friendly and accessible products.</p>
@@ -65,7 +68,7 @@ const About = () => {
 
             <div className="p-2">
                <CardVertical
-                  image="Illy.jpg"
+                  image="turkish-cofee.webp"
                   title="Can coffee make you a better developer?"
                   text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
                   subtext="Jonathan Reinink Aug 18"
@@ -73,21 +76,6 @@ const About = () => {
             </div>
 
          </div>
-
-         <CardHorizontal
-            image="ring.png"
-            title="Can coffee make you a better developer?"
-            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-            subtext="Jonathan Reinink Aug 18"
-         />
-
-         <CardHorizontal
-            image="TapaDoTapa.jpeg"
-            title="Can coffee make you a better developer?"
-            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-            subtext="Jonathan Reinink Aug 18"
-         />
-
       </div>
    )
 }

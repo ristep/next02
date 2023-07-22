@@ -14,9 +14,16 @@ const CardVertical: React.FC<CardProps> = ({ image, title, text, subtext, subtit
 
    return (
 
-      <div className="max-w-sm rounded-md overflow-hidden shadow-lg" suppressHydrationWarning={true}>
+      <div className="max-w-sm raise-on-hover rounded-lg">
+
          {image &&
-            <Image className="w-full" src={image} alt="sliko" />
+            <Image 
+               className="w-full rounded-t-lg" 
+               src={"/"+image} 
+               alt="sliko"
+               width={500} 
+               height={500}
+            />
          }
 
          <div className="px-6 py-4">
