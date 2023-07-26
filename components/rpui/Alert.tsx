@@ -1,9 +1,11 @@
 import React from 'react';
 import Button from './ButtonNeon';
+import ButtonLessonit from './ButtonLessonit';
 
-interface Button {
+interface Buttons {
    label: string;
    onClick: () => void;
+   variant: string;
    color?: string;
 }
 
@@ -11,7 +13,7 @@ interface AlertProps {
    visible: boolean;
    title: string;
    mainText: string;
-   buttons: Button[];
+   buttons: Buttons[];
 }
 
 const Alert: React.FunctionComponent<AlertProps> = ({ title, mainText, buttons, visible }) => {
@@ -34,6 +36,9 @@ const Alert: React.FunctionComponent<AlertProps> = ({ title, mainText, buttons, 
             <h2 className="text-xl font-bold mb-2">{title}</h2>
             <p className="text-gray-800 mb-4">{mainText}</p>
             <div className="flex space-x-4">
+               {/* {buttons.map((button) => (
+                  <ButtonLessonit key={button.label} callback={button.onClick}> {button.label} </ButtonLessonit>
+               ))} */}
                {buttons.map((button) => (
                   <Button key={button.label} callback={button.onClick} label={button.label} color={button.color} />
                ))}

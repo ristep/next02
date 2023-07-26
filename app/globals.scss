@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
 
-// rp classes
-
+  // rp classes
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -14,7 +14,7 @@
       opacity: 1;
     }
   }
-  
+
   .animate-fade-in {
     animation-name: fade-in;
     animation-duration: 0.6s;
@@ -24,16 +24,16 @@
   .raise-on-hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.2s ease-in-out;
-  
+
     &:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     }
   }
-  
+
   .raise-and-glow-on-hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.2s ease-in-out;
-  
+
     &:hover {
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       &::before {
@@ -48,21 +48,21 @@
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
       }
-  
+
       &:hover::before {
         opacity: 1;
       }
     }
   }
 
-// only for demo purposes, to remember syntax
-.rounded-raise{
-  @extend .raise-on-hover;
-  border-radius: 5%;
-}
-//
+  // only for demo purposes, to remember syntax
+  .rounded-raise {
+    @extend .raise-on-hover;
+    border-radius: 5%;
+  }
+  //
 
-// end off rp classes
+  // end off rp classes
 
   :root {
     --background: 0 0% 100%;
@@ -127,7 +127,6 @@
 
     --ring: 217.2 32.6% 17.5%;
   }
-
 }
 
 @layer base {

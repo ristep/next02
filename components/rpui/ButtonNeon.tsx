@@ -45,7 +45,7 @@ const Button: React.FC<ButtonProps> = ({
    return (
 
       <button 
-         className={`${margin} relative group`}
+         className={`${margin} relative group switch-color`}
          onClick={active ? callback : undefined}
          disabled={!active}
          type={type}

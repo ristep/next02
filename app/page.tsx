@@ -1,7 +1,10 @@
 "use client"
 import * as React from "react";
+
 import Button from '@/components/rpui/ButtonNeon';
 import Alert from '@/components/rpui/Alert'
+import ButtonLessonit from "@/components/rpui/ButtonLessonit";
+
 import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
 import Card from "@/components/rpui/Card";
 
@@ -37,7 +40,6 @@ export default function Home() {
   return (
     <div>
 
-  
         <div className="p-8">
           <label>Fake API Key</label>
           <pre>
@@ -46,6 +48,11 @@ export default function Home() {
             <Button callback = {() => getHush()}>Generate Hush</Button>
             <Button callback = {() => copyHush()}>Copy to clipboard</Button>
           </pre>
+          <br/>
+
+          <ButtonLessonit callback={() => copyHush()}>Lessonit Button</ButtonLessonit> 
+          <ButtonLessonit className="alt" callback={() => copyHush()}>Lessonit Button</ButtonLessonit> 
+
         </div>
 
         <div className="grid grid-cols-4 gap-2">
@@ -71,7 +78,7 @@ export default function Home() {
         </div>
 
         <div className="p-4">
-          <Card
+          <Card 
               image="ring.png"
               title="Can coffee make you a better developer?"
               text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
@@ -79,7 +86,7 @@ export default function Home() {
               subtitle="Delorem LXris"
               />
         </div>
-      </div>
+      b</div>
 
         <Alert
             visible={showAlert}

@@ -18,7 +18,7 @@ const About = () => {
          <p>This is the about page for my website.</p>
          <p>Im a software engineer who loves to build things.</p>
          <p>Im passionate about creating user-friendly and accessible products.</p>
-
+         <button>Obicno</button>
          <Button color="blue"   label='Test Button' callback={handleButtonClick} />
          <Button color="red"    label='Button' callback={handleButtonClick} />
          <Button color="yellow" label='Submit' callback={handleButtonClick} type='submit'/>
