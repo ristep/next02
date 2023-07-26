@@ -4,6 +4,7 @@ import * as React from "react";
 import Button from '@/components/rpui/ButtonNeon';
 import Alert from '@/components/rpui/Alert'
 import ButtonLessonit from "@/components/rpui/ButtonLessonit";
+import ButtonSuperGlow from "@/components/rpui/ButtonSuperGlow";
 
 import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
 import Card from "@/components/rpui/Card";
@@ -48,10 +49,14 @@ export default function Home() {
             <Button callback = {() => getHush()}>Generate Hush</Button>
             <Button callback = {() => copyHush()}>Copy to clipboard</Button>
           </pre>
-          <br/>
 
+          <br/>
           <ButtonLessonit callback={() => copyHush()}>Lessonit Button</ButtonLessonit> 
           <ButtonLessonit className="alt" callback={() => copyHush()}>Lessonit Button</ButtonLessonit> 
+
+          <br/>
+          <ButtonSuperGlow callback={() => copyHush()}>Lessonit Button</ButtonSuperGlow> 
+          <ButtonSuperGlow className="alt" callback={() => copyHush()}>Lessonit Button</ButtonSuperGlow>  
 
         </div>
 
