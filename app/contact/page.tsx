@@ -1,6 +1,6 @@
 "use client"
 import Alert from '@/components/rpui/Alert'
-import Button from '@/components/rpui/ButtonNeon';
+import Button from '@/components/rpui/Button';
 import ButtonNeon from '@/components/rpui/ButtonNeon';
 // import { Button as ButtonUI } from "@/components/rpui/ButtonV"
 import Head from 'next/head'
@@ -42,7 +42,7 @@ const Contact = () => {
          <Button color="green" label='Reset' callback={togleAlert} type='reset' active={false} />
          <Button color="slate" label='Reset' callback={togleAlert} type='reset' />
          <Button color="sky" label='Reset' callback={togleAlert} type='reset' />
-         <Button color="orange" label='Reset' callback={togleAlert} type='reset'><p>Children</p></Button>
+         {/* <Button color="orange" label='Reset' callback={togleAlert} type='reset'><p>Children</p></Button> */}
 
          <p>Disabled</p>
 
