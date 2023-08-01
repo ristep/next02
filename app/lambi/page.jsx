@@ -15,7 +15,7 @@ const Lambi = () => {
    const [pins, setPins] = useState({});
    const [showAlert, setShowAlert] = useState(false);
    const [lastIP, setLastIP] = useState({});
-   const [baseURL, setBaseURL] = useState("http://77.29.42.215/pins/lampiAPI.php");
+   const [baseURL, setBaseURL] = useState("https://77.29.42.215/pins/lampiAPI.php");
 
    const handleOK = () => {
       console.log('OK clicked');
@@ -62,7 +62,7 @@ const Lambi = () => {
    }, []);
 
    useEffect(() => {
-      setBaseURL(`http://${lastIP.ip}/pins/lampiAPI.php`)
+      setBaseURL(`https://${lastIP.ip}/pins/lampiAPI.php`)
    }, [lastIP]);
 
    useEffect(() => {
