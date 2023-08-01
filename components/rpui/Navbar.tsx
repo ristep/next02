@@ -22,6 +22,9 @@ const Navbar = () => {
                   <Link href="/contact" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                      Contact
                   </Link>
+                  <Link href="/lambi" className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                     Lambi
+                  </Link>
                </div>
             </div>
          </div>
