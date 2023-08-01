@@ -56,7 +56,7 @@ const Lambi: React.FC = () => {
             console.log('res.data: ', res.data);
             setLastIP(res.data);
          });
-   } );
+   }, [] );
 
    useEffect(() => {
       setBaseURL(`https://${lastIP.ip}/pins/lampiAPI.php`);
