@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   // ssr: false,
-   // render: 'client',
+   ssr: false,
+   render: 'client',
+   experimental: {
+      ssr: false,
+   },
    serverRuntimeConfig: {
-      removeExtraAttributesFromHtml: true,
+      removeExtraAttributesFromHtml: false,
    },
 }
 

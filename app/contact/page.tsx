@@ -55,10 +55,6 @@ const Contact = () => {
          <Button color="orange" label='Reset' callback={togleAlert} type='reset' active={false}/>
 
 
-         {/* <ButtonUI variant="destructive" onClick={togleAlert}>
-            <h2>Button UI</h2>
-         </ButtonUI> */}
-
          <Alert
             visible={showAlert}
             title="Alert Title"

@@ -7,12 +7,12 @@ import axios from 'axios';
 // import { Button as ButtonUI } from "@/components/rpui/ButtonV"
 import Head from 'next/head'
 import { useState, useEffect, use } from 'react';
-// import ReactJson from 'react-json-view';
+import ReactJson from 'react-json-view';
 
 const getIpUrl = "https://sman.cloud/ip_log/get_last_ip.php";
 
 const Lambi = () => {
-   const [pins, setPins] = useState({});
+   const [pins, setPins] = useState(["1", "1", "1", "1", "1", "1", "1", "1"]);
    const [showAlert, setShowAlert] = useState(false);
    const [lastIP, setLastIP] = useState({});
    const [baseURL, setBaseURL] = useState("https://77.29.42.215/pins/lampiAPI.php");
@@ -70,7 +70,7 @@ const Lambi = () => {
          .then(res => {
             const dt = String(res.data).split('');
             console.log('dt: ', dt);
-            setPins((dt));
+            setPins(dt);
          })
    }, [baseURL]);
 
@@ -108,8 +108,9 @@ const Lambi = () => {
             Alert
          </Button>
 
-         {/* <ReactJson src={lastIP} theme="rjv-default" />
-         <p>{baseURL}</p> */}
+         <ReactJson src={lastIP} theme="rjv-default" />
+         <ReactJson src={pins} theme="rjv-default" /> 
+         <p>{baseURL}</p>  
 
          <Alert
             visible={showAlert}
