@@ -2,12 +2,12 @@
 
 import Alert from '@/components/rpui/Alert'
 import Button from '@/components/rpui/Button3D';
-import ButtonNeon from '@/components/rpui/ButtonNeon';
+// import ButtonNeon from '@/components/rpui/ButtonNeon';
 import axios from 'axios';
 // import { Button as ButtonUI } from "@/components/rpui/ButtonV"
 import Head from 'next/head'
 import { useState, useEffect, use } from 'react';
-import ReactJson from 'react-json-view';
+// import ReactJson from 'react-json-view';
 
 const getIpUrl = "https://sman.cloud/ip_log/get_last_ip.php";
 
