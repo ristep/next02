@@ -7,16 +7,30 @@ import axios from 'axios';
 
 const getIpUrl = "https://sman.cloud/ip_log/get_last_ip.php";
 
-const options = {}
-const palette = {}
-const styles = {}
+const options = {
+   hideDataTypes: false,
+   hideObjectSize: false,
+   hidePreviews: false
+}
+const palette = {
+}
+const styles = {
+   fontSize: 14,
+   lineHeight: 1.2,
+   tabWidth: 2
+}
 
 const Lambi = () => {
 
    const [pins, setPins] = useState(["1", "1", "1", "1", "1", "1", "1", "1"]);
    const [showAlert, setShowAlert] = useState(false);
    const [lastIP, setLastIP] = useState({});
-   const [baseURL, setBaseURL] = useState("https://lapi-smanzy.bot.nu/lampiAPI.php");
+   const [urls, setUrls] = useState({
+         mainUrl: "https://lapi-smanzy.bot.nu/lampiAPI.php",
+         ipUrl: "",
+         localUrl: "https://192.168.100.222/pins/lampiAPI.php",
+         getIpUrl: getIpUrl,
+   });
 
    const handleOK = () => {
       console.log('OK clicked');
@@ -45,9 +59,9 @@ const Lambi = () => {
    };
 
    const togleLamba = (pin) => {
-      console.log('Clicked = ' + pin);
-      console.log(baseURL, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } });
-      axios.get(baseURL, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } })
+      // console.log('Clicked = ' + pin);
+      // console.log(baseURL, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } });
+      axios.get(urls.mainUrl, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } })
          .then(res => {
             console.log('res: ', res);
             setPins(String(res.data).split(''));
@@ -60,20 +74,20 @@ const Lambi = () => {
             console.log('res.data: ', res.data);
             setLastIP(res.data);
          });
-   }, [] );
-
-   // useEffect(() => {
-   //    setBaseURL(`https://${lastIP.ip}/pins/lampiAPI.php`);
-   // }, [lastIP]);
+   }, []);
 
    useEffect(() => {
-      axios.get(baseURL)
+      setUrls( { ...urls, ipUrl: `https://${lastIP.ip}/pins/lampiAPI.php` });
+   }, [lastIP]);
+
+   useEffect(() => {
+      axios.get(urls.mainUrl)
          .then(res => {
             const dt = String(res.data).split('');
             console.log('dt: ', dt);
             setPins(dt);
          });
-   }, [baseURL]);
+   }, [urls.mainUrl]);
 
    return (
       <div className='my-combo-class'>
@@ -109,11 +123,21 @@ const Lambi = () => {
          <ObjectView
             data={lastIP}
             options={options}
-            tyles={styles}
+            styles={styles}
             palette={palette}
          />
-         <ObjectView data={pins} />
-         <h4>{baseURL} </h4>
+         <ObjectView 
+            data={pins} 
+            options={options}
+            styles={styles}
+            palette={palette}
+         />
+         <ObjectView 
+            data={urls} 
+            options={options}
+            styles={styles}
+            palette={palette}
+         />
 
          <Alert
             visible={showAlert}
