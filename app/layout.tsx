@@ -28,7 +28,7 @@ export default function RootLayout({
       </ShadowPanel>  
 
       <footer>
-        <h1>Next02-testapp ver. ver - 0.02.04-lambi </h1>
+        <h1>Next02-testapp ver. ver - 0.02.05-lambi </h1>
       </footer>
       </body>
     </html>
