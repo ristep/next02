@@ -1,18 +1,22 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-//import ReactJson from 'react-json-view';
+import { ObjectView } from 'react-object-view';
 import Alert from '@/components/rpui/Alert';
 import Button from '@/components/rpui/Button3D';
 import axios from 'axios';
 
 const getIpUrl = "https://sman.cloud/ip_log/get_last_ip.php";
 
-const Lambi: React.FC = () => {
+const options = {}
+const palette = {}
+const styles = {}
 
-   const [pins, setPins] = useState<string[]>(["1", "1", "1", "1", "1", "1", "1", "1"]);
+const Lambi = () => {
+
+   const [pins, setPins] = useState(["1", "1", "1", "1", "1", "1", "1", "1"]);
    const [showAlert, setShowAlert] = useState(false);
-   const [lastIP, setLastIP] = useState<{ ip?: string }>({});
-   const [baseURL, setBaseURL] = useState<string>("https://77.29.42.215/pins/lampiAPI.php");
+   const [lastIP, setLastIP] = useState({});
+   const [baseURL, setBaseURL] = useState("https://lapi-smanzy.bot.nu/lampiAPI.php");
 
    const handleOK = () => {
       console.log('OK clicked');
@@ -36,11 +40,11 @@ const Lambi: React.FC = () => {
       axios.get(baseURL, { params: { osvez: true } });
    };
 
-   const light = (ndx: number) => {
+   const light = (ndx) => {
       return pins[ndx] === '0';
    };
 
-   const togleLamba = (pin: string) => {
+   const togleLamba = (pin) => {
       console.log('Clicked = ' + pin);
       console.log(baseURL, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } });
       axios.get(baseURL, { params: { pin: pin, val: light(+pin) ? 'off' : 'on' } })
@@ -58,9 +62,9 @@ const Lambi: React.FC = () => {
          });
    }, [] );
 
-   useEffect(() => {
-      setBaseURL(`https://${lastIP.ip}/pins/lampiAPI.php`);
-   }, [lastIP]);
+   // useEffect(() => {
+   //    setBaseURL(`https://${lastIP.ip}/pins/lampiAPI.php`);
+   // }, [lastIP]);
 
    useEffect(() => {
       axios.get(baseURL)
@@ -102,9 +106,14 @@ const Lambi: React.FC = () => {
             Alert
          </Button>
 
-         {/* <ReactJson src={lastIP} theme="rjv-default" />
-         <ReactJson src={pins} theme="rjv-default" />
-         <p>{baseURL}</p> */}
+         <ObjectView
+            data={lastIP}
+            options={options}
+            tyles={styles}
+            palette={palette}
+         />
+         <ObjectView data={pins} />
+         <h4>{baseURL} </h4>
 
          <Alert
             visible={showAlert}

@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/rpui/Alert.tsx", "app/page.tsx", "app/lambi/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/rpui/Alert.tsx", "app/page.tsx", "app/lambi/page.jsx"],
   "exclude": ["node_modules"]
 }
