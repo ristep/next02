@@ -1,10 +1,32 @@
 import ShadowPanel from '@/components/rpui/ShadowPanel'
-// import Navbar from '@/components/rpui/Navbar'
-
-import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/rpui/NavbarCgpt/Navbar'
+//import Navbar from "@/components/rpui/NavbarGPT2/Navbar";
+import './globals.scss'
+
+const links = [
+  { id: 1, title: "Home", url: "/" },
+  { id: 2, title: "About", url: "/about" },
+  { id: 3, title: "Contact", url: "/contact" },
+];
+
+const menuItems = [
+  { id: 1, title: "Menu Item 1", url: "#" },
+  { id: 2, title: "Menu Item 2", url: "#" },
+  { id: 3, title: "Menu Item 3", url: "#" },
+];
+
+// const Page = () => {
+//   return (
+//     <>
+//       <Navbar logo="/path/to/logo.png" links={links} menuItems={menuItems} />
+//       {/* Rest of your page content */}
+//     </>
+//   );
+// };
+
+// export default Page;
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,14 +45,14 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
-      <Navbar />
+      <Navbar logo="/icon3.png" links={links} menuItems={menuItems} />
 
       <ShadowPanel>
         {children}
       </ShadowPanel>  
 
       <footer>
-        <h1>Next02-testapp ver. ver - 0.02.05-lambi </h1>
+        <h1>Next02-testapp ver. ver - 0.03.00-Logo </h1>
       </footer>
       </body>
     </html>

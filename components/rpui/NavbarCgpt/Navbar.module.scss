@@ -1,5 +1,5 @@
 $main_color:#215881;
-$light_color:#ffa;
+$light_color:white;
 $hover_color:#6ed7f1;
 
 .navbar {
@@ -13,6 +13,10 @@ $hover_color:#6ed7f1;
    .logo {
       font-size: 24px;
       font-weight: bold;
+      img {
+         max-width: 2em; 
+         height: auto; 
+      }
    }
 
    .menuIcon {
