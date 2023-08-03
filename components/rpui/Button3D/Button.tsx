@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Button3D.scss';
+import './Button.scss';
 
 interface Button {
    children: React.ReactNode;
@@ -9,7 +9,7 @@ interface Button {
    disabled?: boolean;
 }
 
-const Button3D: React.FC<Button> = ({ children, callback, className, type="", disabled=false }) => {
+const Button: React.FC<Button> = ({ children, callback, className, type="", disabled=false }) => {
    return (
       <button className={`btn3d btn3d-${type} ${className}`} onClick={callback} disabled={disabled}>
          {children}
@@ -17,5 +17,5 @@ const Button3D: React.FC<Button> = ({ children, callback, className, type="", di
    );
 };
 
-export default Button3D;
+export default Button;
 

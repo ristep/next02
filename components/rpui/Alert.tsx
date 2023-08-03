@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './ButtonNeon';
+import Button from './ButtonNeon/Button';
 interface Buttons {
    label: string;
    onClick: () => void;

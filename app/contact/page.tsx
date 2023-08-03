@@ -1,7 +1,7 @@
 "use client"
 import Alert from '@/components/rpui/Alert'
-import Button from '@/components/rpui/Button';
-import ButtonNeon from '@/components/rpui/ButtonNeon';
+import Button from '@/components/rpui/ButtonTW/Button';
+import ButtonNeon from '@/components/rpui/ButtonNeon/Button';
 // import { Button as ButtonUI } from "@/components/rpui/ButtonV"
 import Head from 'next/head'
 import { useState } from 'react';

@@ -1,12 +1,12 @@
 "use client"
 import * as React from "react";
 
-import Button from '@/components/rpui/ButtonNeon';
+import Button from '@/components/rpui/ButtonNeon/Button';
 import Alert from '@/components/rpui/Alert'
-import ButtonLessonit from "@/components/rpui/ButtonLessonit";
-import ButtonSuperGlow from "@/components/rpui/ButtonSuperGlow";
-import ButtonEstast from "@/components/rpui/ButtonEstast";
-import Button3D from "@/components/rpui/Button3D";
+import ButtonLessonit from "@/components/rpui/ButtonLessonit/Button";
+import ButtonSuperGlow from "@/components/rpui/ButtonSuperGlow/Button";
+import ButtonEstast from "@/components/rpui/ButtonEstast/Button";
+import Button3D from "@/components/rpui/Button3D/Button";
 
 import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
 import Card from "@/components/rpui/Card";

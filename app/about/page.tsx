@@ -2,7 +2,7 @@
 
 import CardVertical from "@/components/rpui/CardVertical";
 import CardHorizontal from "@/components/rpui/CardHorizontal";
-import Button from "@/components/rpui/Button";
+import Button from "@/components/rpui/ButtonTW/Button";
 
 const About = () => {
 

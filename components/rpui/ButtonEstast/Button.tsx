@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/ButtonEstast.scss';
+import './Button.scss';
 
 interface ButtonEstast {
    children: React.ReactNode;

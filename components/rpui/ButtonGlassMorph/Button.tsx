@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/ButtonGlassMorph.scss';
+import './Button.scss';
 
 interface ButtonGlassMorphProps {
    children: React.ReactNode;

@@ -1,8 +1,10 @@
 import ShadowPanel from '@/components/rpui/ShadowPanel'
-import Navbar from '@/components/rpui/Navbar'
+// import Navbar from '@/components/rpui/Navbar'
+
 import './globals.scss'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/rpui/NavbarCgpt/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 

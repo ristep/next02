@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { ObjectView } from 'react-object-view';
 import Alert from '@/components/rpui/Alert';
-import Button from '@/components/rpui/Button3D';
+import Button from '@/components/rpui/Button3D/Button';
 import axios from 'axios';
 
 const getIpUrl = "https://sman.cloud/ip_log/get_last_ip.php";
