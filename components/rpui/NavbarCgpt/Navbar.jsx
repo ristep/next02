@@ -1,6 +1,8 @@
 "use client"
 import React, { useState } from 'react';
+import Link from "next/link";
 import styles from './Navbar.module.scss';
+import Image from 'next/image';
 
 const Navbar = ({ logo, links, menuItems }) => {
    const [isOpen, setIsOpen] = useState(false);
@@ -13,28 +15,30 @@ const Navbar = ({ logo, links, menuItems }) => {
       <nav className={styles.navbar}>
 
          <div className={styles.logo}>
-            <img src={logo} alt="Logo" />
+            <Image src={logo} alt="Logo" width={32} height={32}/>
          </div>
 
          <div className={`${styles.menuIcon} ${isOpen ? styles.open : ''}`} onClick={toggleMenu}>
             <div className={styles.bar1}></div>
             <div className={styles.bar2}></div>
             <div className={styles.bar3}></div>
-         </div>
+         </div> 
+
          <ul className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-            <li>
-               <a href="/">Home</a>
-            </li>
-            <li>
-               <a href="/about">About</a>
-            </li>
-            <li>
-               <a href="/contact">Contact</a>
-            </li>
-            <li>
-               <a href="/lambi">Lambi</a>
-            </li>
+            {links.map((link) => (
+               <li key={link.id}>
+                  <Link href={link.url}>
+                     {link.title}
+                  </Link>
+               </li>
+            ))}
+            {menuItems.map((item) => (
+               <li key={item.id}>
+                  <a href={item.url}>{item.title}</a>
+               </li>
+            ))}
          </ul>
+
       </nav>
    );
 };

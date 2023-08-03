@@ -1,0 +1,33 @@
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 100;
+   background-color: #fff;
+   border-bottom: 1px solid #ccc;
+   height: 50px;
+   padding: 0 1rem;
+   box-sizing: border-box;
+
+   @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+   }
+
+   .nav-link {
+      color: #333;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+         color: #51c1f1;
+      }
+   }
+
+   .nav-icon {
+      padding: 0 10px;
+   }
+}
