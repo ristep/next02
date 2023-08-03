@@ -12,7 +12,7 @@ const links = [
   { id: 1, title: "Home", url: "/" },
   { id: 2, title: "About", url: "/about" },
   { id: 3, title: "Contact", url: "/contact" },
-  { id: 3, title: "Lambi", url: "/lambi" },
+  { id: 4, title: "Lambi", url: "/lambi" },
 ];
 
 const menuItems: never[] = [
@@ -53,7 +53,7 @@ export default function RootLayout({
       </ShadowPanel>  
 
       <footer>
-        <h1>Next02-testapp ver. ver - 0.03.00-Logo </h1>
+        <h1>Next02-testapp ver. ver - 0.04.02-Tupti </h1>
       </footer>
       </body>
     </html>

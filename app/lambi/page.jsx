@@ -77,7 +77,7 @@ const Lambi = () => {
    }, []);
 
    useEffect(() => {
-      setUrls(prevUrls => ({ ...prevUrls,  ipUrl: `https://${res.data.ip}/pins/lampiAPI.php` }));
+      setUrls(prevUrls => ({ ...prevUrls,  ipUrl: `https://${lastIP}/pins/lampiAPI.php` }));
    }, [lastIP]);
 
    useEffect(() => {
