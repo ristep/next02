@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = ({ logo, links, menuItems }) => {
    const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = ({ logo, links, menuItems }) => {
    return (
       <nav className="navbar">
          <div className="logo">
-            <img src={logo} alt="Logo" />
+            <Image src={logo} alt="Logo" />
          </div>
          <div
             className={`menuIcon ${menuOpen ? "open" : ""}`}
