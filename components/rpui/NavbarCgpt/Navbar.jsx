@@ -14,9 +14,9 @@ const Navbar = ({ logo, links, menuItems }) => {
    return (
       <nav className={styles.navbar}>
 
-         <div className={styles.logo}>
+         <Link className={styles.logo} href="/" >
             <Image src={logo} alt="Logo" width={32} height={32}/>
-         </div>
+         </Link>
 
          <div className={`${styles.menuIcon} ${isOpen ? styles.open : ''}`} onClick={toggleMenu}>
             <div className={styles.bar1}></div>
