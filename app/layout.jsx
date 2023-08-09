@@ -1,8 +1,9 @@
 "use client"
+
 import ShadowPanel from '@/components/rpui/ShadowPanel'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Navbar from '@/components/rpui/NavbarCgpt/Navbar'
+// import type { Metadata } from 'next'
+import { Inter } from 'next/font/google';
+import Navbar from '@/components/rpui/NavbarCgpt/Navbar';
 // import Navbar from "@/components/rpui/NavbarGPT2/Navbar";
 // import Navbar from "@/components/rpui/NavbarBard/Navbar";
 
@@ -15,7 +16,7 @@ const links = [
   { id: 4, title: "Lambi", url: "/lambi" },
 ];
 
-const menuItems: never[] = [
+const menuItems = [
 ];
 
 // const Page = () => {
@@ -36,11 +37,7 @@ const inter = Inter({ subsets: ['latin'] })
 //     description: 'Just an example of stupidity of todays frontend framvorks',
 // }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children, }) {
 
   return (
     <html lang="en">
@@ -53,7 +50,7 @@ export default function RootLayout({
       </ShadowPanel>  
 
       <footer>
-        <h1>Next02-testapp ver. ver - 0.04.02-Tupti </h1>
+        <h1>Next02-testapp ver. ver - 0.06.02-Loading </h1>
       </footer>
       </body>
     </html>
