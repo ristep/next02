@@ -37,7 +37,7 @@ export default function Home() {
         console.log('Cancel clicked');
         setShowAlert(false);
       }, color: "red"
-    },
+    }
   ];
 
   return (
