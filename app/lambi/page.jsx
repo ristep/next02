@@ -26,7 +26,7 @@ const Lambi = () => {
    const [showAlert, setShowAlert] = useState(false);
    const [lastIP, setLastIP] = useState({});
    const [urls, setUrls] = useState({
-         mainUrl: "https://lapi-smanzy.uk.to/lampiAPI.php",
+         mainUrl: "https://lapi-smanzy.mooo.com/lampiAPI.php",
          ipUrl: "",
          localUrl: "https://192.168.100.222/pins/lampiAPI.php",
          getIpUrl: getIpUrl,
