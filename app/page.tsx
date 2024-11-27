@@ -1,5 +1,6 @@
 "use client"
 import * as React from "react";
+import LogRocket from 'logrocket';
 
 import Button from '@/components/rpui/ButtonNeon/Button';
 import Alert from '@/components/rpui/Alert'
@@ -10,6 +11,9 @@ import Button3D from "@/components/rpui/Button3D/Button";
 
 import { useCopyToClipboard } from '../hooks/useCopyToClipBoard'
 import Card from "@/components/rpui/Card";
+
+LogRocket.init('agnqd6/reactsmancloud');
+
 
 export default function Home() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
